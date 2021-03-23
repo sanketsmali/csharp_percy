@@ -23,8 +23,8 @@ button {
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background: #f3f3f3;
-	color: #454323;
+	background: #DCDCDC;
+	color: #7700ff;
 	min-width: 230px;
 	max-width: 550px;
 	margin: 0 auto;
@@ -42,10 +42,10 @@ body {
 }
 
 .todoapp {
-	background: #fff;
+	background: rgb(238, 147, 147);
 	margin: 130px 0 40px 0;
 	position: relative;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	box-shadow: 0 2px 4px 0 rgba(164, 136, 240, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
