@@ -25,8 +25,8 @@ namespace example_percy_csharp_selenium
             server.StartTestServer();
             // Create a headless Chrome browser.
             ChromeOptions options = new ChromeOptions();
-            //options.AddArguments("--headless");
-            driver = new ChromeDriver(options);
+          //  options.AddArguments("--headless");
+            driver = new ChromeDriver(@"/Users/Sanket.M/Documents/chromedriver_latest",options);
             percy = new Percy(driver);
         }
 
@@ -43,7 +43,7 @@ namespace example_percy_csharp_selenium
             IWebElement element = driver.FindElement(By.ClassName("todoapp"));
             Assert.IsNotNull(element);
             // Take a Percy snapshot.
-            percy.Snapshot("Home Page");
+            percy.Snapshot("Home Page",new List<int> { 768, 992, 1200 });
         }
 
         public void acceptsANewTodo()
@@ -84,7 +84,7 @@ namespace example_percy_csharp_selenium
             Assert.AreEqual("0 items left", todoCountEl.Text);
 
             // Take a Percy snapshot specifying a minimum height.
-            percy.Snapshot("Checked off todo", null, 1200, false, ".clear-completed { visibility: hidden; }");
+            percy.Snapshot("Checked off todo", new List<int> { 768, 992, 1200 },1200, false, ".clear-completed { visibility: hidden; }");
 
         }
 
